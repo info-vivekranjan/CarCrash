@@ -1,4 +1,39 @@
 .carCrashCont {
-  border: 1px solid red;
-  padding-top: 80px;
+  /* border: 1px solid red; */
+  padding-top: 70px;
+}
+
+.tableHeader {
+  width: 100%;
+  display: flex;
+
+  /* border: 1px solid black; */
+}
+
+.tableHeader div:nth-child(1),
+.tableHeader div:nth-child(2),
+.tableHeader div:nth-child(3),
+.tableHeader div:nth-child(4) {
+  width: 25vw;
+  border: 1px solid silver;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableRows {
+  width: 100%;
+  display: flex;
+}
+
+.tableRows div:nth-child(1),
+.tableRows div:nth-child(2),
+.tableRows div:nth-child(3),
+.tableRows div:nth-child(4) {
+  width: 25vw;
+  border: 1px solid silver;
+  height: 7vh;
+  display: flex;
+  align-items: center;
 }
