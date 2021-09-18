@@ -8,8 +8,15 @@
   text-align: left;
   padding: 1vw 3vw;
   background-color: white;
+  color: #6c757d;
   transition: 400ms;
 }
 .crashSection:hover {
   box-shadow: 1px 1px 4px 8px rgb(223, 223, 223);
+}
+
+.crashHeader > h1 {
+  color: #ff073a;
+  text-align: center;
+  font-size: 2.5rem;
 }

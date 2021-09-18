@@ -4,36 +4,112 @@
 }
 
 .tableHeader {
-  width: 100%;
+  width: 80%;
   display: flex;
+  margin: auto;
+  border: 1px solid silver;
+  border-bottom: none;
   /* border: 1px solid black; */
+}
+
+.headerCont > h1 {
+  color: #6c757d;
 }
 
 .tableHeader div:nth-child(1),
 .tableHeader div:nth-child(2),
 .tableHeader div:nth-child(3),
 .tableHeader div:nth-child(4) {
-  width: 25vw;
+  width: 20vw;
   border: 1px solid silver;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #ebebeb;
+  color: #6c757d;
 }
 
 .tableRows {
-  width: 100%;
+  width: 80%;
   display: flex;
   text-decoration: none;
+  margin: auto;
+  border: 1px solid silver;
+  border-bottom: none;
+  border-top: none;
+}
+
+.tableRows:nth-child(even) {
+  background-color: #ededee;
 }
 
 .tableRows div:nth-child(1),
 .tableRows div:nth-child(2),
 .tableRows div:nth-child(3),
 .tableRows div:nth-child(4) {
-  width: 25vw;
+  width: 20vw;
   border: 1px solid silver;
   height: 7vh;
   display: flex;
   align-items: center;
+  color: #6c757d;
+}
+
+.tableRows div:nth-child(1) {
+  color: #ff073a;
+}
+.tableRows div:nth-child(2) {
+  color: #007bff;
+}
+
+.tableRows div:nth-child(3) {
+  color: #28a745;
+}
+
+.tableRows div:nth-child(4) {
+  color: #6c757d;
+}
+
+.paginationCont {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.paginationCont button:nth-child(1),
+.paginationCont button:nth-child(2),
+.paginationCont button:nth-child(3) {
+  font-size: 18px;
+  padding: 8px 15px;
+}
+
+.paginationCont button:nth-child(1) {
+  border: 1px solid #ff073a;
+  color: #ff073a;
+  transition: 300ms;
+}
+
+.paginationCont button:nth-child(1):hover {
+  border: 1px solid #ff073a;
+  background-color: #ff073a;
+  color: white;
+}
+
+.paginationCont button:nth-child(2) {
+  border: 1px solid #6c757d;
+  color: #6c757d;
+}
+
+.paginationCont button:nth-child(3) {
+  border: 1px solid #28a745;
+  color: #28a745;
+  transition: 300ms;
+}
+
+.paginationCont button:nth-child(3):hover {
+  border: 1px solid #28a745;
+  background-color: #28a745;
+  color: white;
 }

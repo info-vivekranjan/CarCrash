@@ -48,50 +48,63 @@ function CarCrashDetails() {
       style={{ backgroundColor: theme.bodyBackgroundCrashDetails }}
     >
       <section className={styles.crashSection}>
-        <header>
+        <header className={styles.crashHeader}>
           <h1>Car Crash Details</h1>
         </header>
 
         <section>
-          <h1>vehicle_type_code1: {data[0]?.vehicle_type_code1}</h1>
-          <h1>vehicle_type_code2: {data[0]?.vehicle_type_code2}</h1>
-          <h1>crash_date: {data[0]?.crash_date}</h1>
-          <h1>crash_time: {data[0]?.crash_time}</h1>
-          <h1>on_street_name: {data[0]?.on_street_name}</h1>
-          <h1>
-            contributing_factor_vehicle_1:{" "}
-            {data[0]?.contributing_factor_vehicle_1}
-          </h1>
-          <h1>
-            contributing_factor_vehicle_2:{" "}
-            {data[0]?.contributing_factor_vehicle_2}
-          </h1>
-          <h1>
-            number_of_persons_injured: {data[0]?.number_of_persons_injured}
-          </h1>
-          <h1>number_of_persons_killed: {data[0]?.number_of_persons_killed}</h1>
-          <h1>
-            number_of_pedestrians_injured:{" "}
-            {data[0]?.number_of_pedestrians_injured}
-          </h1>
-          <h1>
-            number_of_pedestrians_killed:{" "}
-            {data[0]?.number_of_pedestrians_killed}
-          </h1>
-          <h1>
-            number_of_cyclist_injured: {data[0]?.number_of_cyclist_injured}
-          </h1>
-          <h1>number_of_cyclist_killed: {data[0]?.number_of_cyclist_killed}</h1>
-          <h1>
-            number_of_motorist_injured: {data[0]?.number_of_motorist_injured}
-          </h1>
-          <h1>
-            number_of_motorist_killed: {data[0]?.number_of_motorist_killed}
-          </h1>
-          <h1>
-            number_of_pedestrians_injured:{" "}
-            {data[0]?.number_of_pedestrians_injured}
-          </h1>
+          {isLoading ? (
+            <h3>Loading...</h3>
+          ) : isError ? (
+            <h3>Something went wrong...</h3>
+          ) : (
+            <section>
+              <h1>vehicle_type_code1: {data[0]?.vehicle_type_code1}</h1>
+              <h1>vehicle_type_code2: {data[0]?.vehicle_type_code2}</h1>
+              <h1>crash_date: {data[0]?.crash_date}</h1>
+              <h1>crash_time: {data[0]?.crash_time}</h1>
+              <h1>on_street_name: {data[0]?.on_street_name}</h1>
+              <h1>
+                contributing_factor_vehicle_1:{" "}
+                {data[0]?.contributing_factor_vehicle_1}
+              </h1>
+              <h1>
+                contributing_factor_vehicle_2:{" "}
+                {data[0]?.contributing_factor_vehicle_2}
+              </h1>
+              <h1>
+                number_of_persons_injured: {data[0]?.number_of_persons_injured}
+              </h1>
+              <h1>
+                number_of_persons_killed: {data[0]?.number_of_persons_killed}
+              </h1>
+              <h1>
+                number_of_pedestrians_injured:{" "}
+                {data[0]?.number_of_pedestrians_injured}
+              </h1>
+              <h1>
+                number_of_pedestrians_killed:{" "}
+                {data[0]?.number_of_pedestrians_killed}
+              </h1>
+              <h1>
+                number_of_cyclist_injured: {data[0]?.number_of_cyclist_injured}
+              </h1>
+              <h1>
+                number_of_cyclist_killed: {data[0]?.number_of_cyclist_killed}
+              </h1>
+              <h1>
+                number_of_motorist_injured:{" "}
+                {data[0]?.number_of_motorist_injured}
+              </h1>
+              <h1>
+                number_of_motorist_killed: {data[0]?.number_of_motorist_killed}
+              </h1>
+              <h1>
+                number_of_pedestrians_injured:{" "}
+                {data[0]?.number_of_pedestrians_injured}
+              </h1>
+            </section>
+          )}
         </section>
       </section>
     </div>
