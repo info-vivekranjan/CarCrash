@@ -42,7 +42,7 @@
   border-top: none;
 }
 
-.tableRows:nth-child(even) {
+.tableRows:hover {
   background-color: #ededee;
 }
 
@@ -79,8 +79,7 @@
 }
 
 .paginationCont button:nth-child(1),
-.paginationCont button:nth-child(2),
-.paginationCont button:nth-child(3) {
+.paginationCont button:nth-child(2) {
   font-size: 18px;
   padding: 8px 15px;
 }
@@ -98,17 +97,12 @@
 }
 
 .paginationCont button:nth-child(2) {
-  border: 1px solid #6c757d;
-  color: #6c757d;
-}
-
-.paginationCont button:nth-child(3) {
   border: 1px solid #28a745;
   color: #28a745;
   transition: 300ms;
 }
 
-.paginationCont button:nth-child(3):hover {
+.paginationCont button:nth-child(2):hover {
   border: 1px solid #28a745;
   background-color: #28a745;
   color: white;

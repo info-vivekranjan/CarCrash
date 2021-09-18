@@ -12,6 +12,9 @@ const themeValue = {
     bodyBackground: "#0E141E",
     navBackground: "#1E1E30",
     bodyBackgroundCrashDetails: "#0E141E",
+    tableBorder: "1px solid #003c80",
+    tableBorderBottom: "none",
+    tableBorderTop: "none",
   },
 };
 

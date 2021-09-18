@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { CarCrashContext } from "../Context/CarCrashContext";
 import styles from "./Css/CarCrash.module.css";
 
 function CarCrash() {
@@ -9,7 +10,9 @@ function CarCrash() {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsEroor] = useState(false);
 
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
+
+  const { theme } = useContext(CarCrashContext);
 
   const getCrashData = (page = 0) => {
     setIsLoading(true);
@@ -49,11 +52,14 @@ function CarCrash() {
           <h3>Something went wrong...</h3>
         ) : (
           <section>
-            <div className={styles.tableHeader}>
-              <div>Car type - 1</div>
-              <div>Car type - 2</div>
-              <div>Crash Date</div>
-              <div>Crash Time</div>
+            <div
+              className={styles.tableHeader}
+              style={{ border: theme.tableBorder }}
+            >
+              <div style={{ border: theme.tableBorder }}>Car type - 1</div>
+              <div style={{ border: theme.tableBorder }}>Car type - 2</div>
+              <div style={{ border: theme.tableBorder }}>Crash Date</div>
+              <div style={{ border: theme.tableBorder }}>Crash Time</div>
             </div>
             <div>
               {data.map((item) => {
@@ -62,21 +68,34 @@ function CarCrash() {
                     key={item.collision_id}
                     className={styles.tableRows}
                     to={item.collision_id}
+                    style={{
+                      border: theme.tableBorder,
+                      borderBottom: theme.tableBorderBottom,
+                      borderTop: theme.tableBorderTop,
+                    }}
                   >
-                    <div>{item.vehicle_type_code1}</div>
-                    <div>{item.vehicle_type_code2}</div>
-                    <div>{item.crash_date}</div>
-                    <div>{item.crash_time}</div>
+                    <div style={{ border: theme.tableBorder }}>
+                      {item.vehicle_type_code1}
+                    </div>
+                    <div style={{ border: theme.tableBorder }}>
+                      {item.vehicle_type_code2}
+                    </div>
+                    <div style={{ border: theme.tableBorder }}>
+                      {item.crash_date}
+                    </div>
+                    <div style={{ border: theme.tableBorder }}>
+                      {item.crash_time}
+                    </div>
                   </Link>
                 );
               })}
             </div>
             <div className={styles.paginationCont}>
-              <button disabled={page === 1} onClick={() => setPage(page - 1)}>
+              <button disabled={page === 0} onClick={() => setPage(page - 15)}>
                 Prev
               </button>
-              <button>{page}</button>
-              <button onClick={() => setPage(page + 1)}>Next</button>
+
+              <button onClick={() => setPage(page + 15)}>Next</button>
             </div>
           </section>
         )}
