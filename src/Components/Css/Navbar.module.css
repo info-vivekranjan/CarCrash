@@ -1,0 +1,56 @@
+.navCont {
+  background-color: #39424e;
+  color: #b7c9bc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.rightNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo,
+.DosDont {
+  color: silver;
+  text-decoration: none;
+}
+
+.navLogo:hover,
+.DosDont:hover {
+  text-decoration: underline;
+}
+
+.navLogo {
+  font-size: 2.5vw;
+  font-weight: 600;
+  margin-left: 3vw;
+}
+.DosDont {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-right: 8vw;
+}
+
+.lightModeCont,
+.darkModeCont {
+  margin-right: 3vw;
+}
+
+.lightModeCont > i {
+  color: silver;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+.darkModeCont > i {
+  color: gold;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
