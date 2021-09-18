@@ -6,7 +6,6 @@
 .tableHeader {
   width: 100%;
   display: flex;
-
   /* border: 1px solid black; */
 }
 
@@ -25,6 +24,7 @@
 .tableRows {
   width: 100%;
   display: flex;
+  text-decoration: none;
 }
 
 .tableRows div:nth-child(1),

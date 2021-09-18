@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router";
 import { CarCrash } from "./CarCrash";
+import { CarCrashDetails } from "./CarCrashDetails";
 import { Navbar } from "./Navbar";
 function Routes() {
   return (
@@ -8,6 +9,11 @@ function Routes() {
       <Route path="/" exact>
         <Navbar />
         <CarCrash />
+      </Route>
+
+      <Route path="/:id" exact>
+        <Navbar />
+        <CarCrashDetails />
       </Route>
 
       <Route>

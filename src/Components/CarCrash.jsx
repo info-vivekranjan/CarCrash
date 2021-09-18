@@ -54,12 +54,16 @@ function CarCrash() {
               <div>
                 {data.map((item) => {
                   return (
-                    <div key={item.collision_id} className={styles.tableRows}>
+                    <Link
+                      key={item.collision_id}
+                      className={styles.tableRows}
+                      to={item.collision_id}
+                    >
                       <div>{item.vehicle_type_code1}</div>
                       <div>{item.vehicle_type_code2}</div>
                       <div>{item.crash_date}</div>
                       <div>{item.crash_time}</div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>

@@ -6,10 +6,12 @@ const themeValue = {
   light: {
     bodyBackground: "white",
     navBackground: "#F6F6F7",
+    bodyBackgroundCrashDetails: "#f3f7f7",
   },
   dark: {
-    bodyBackground: "#161625",
+    bodyBackground: "#0E141E",
     navBackground: "#1E1E30",
+    bodyBackgroundCrashDetails: "#0E141E",
   },
 };
 
