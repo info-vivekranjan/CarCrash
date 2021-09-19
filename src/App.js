@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Routes } from "./Components/Routes";
 import { useContext } from "react";

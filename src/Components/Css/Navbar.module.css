@@ -54,3 +54,38 @@
   font-size: 2.5vw;
   cursor: pointer;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navCont {
+    height: 70px;
+  }
+
+  .navLogo {
+    font-size: 7vw;
+    font-weight: 600;
+    margin-left: 5vw;
+  }
+  .DosDont {
+    font-size: 4vw;
+    font-weight: 600;
+    margin-right: 8vw;
+  }
+
+  .lightModeCont,
+  .darkModeCont {
+    margin-right: 8vw;
+  }
+
+  .lightModeCont > i {
+    color: silver;
+    font-size: 7vw;
+    cursor: pointer;
+  }
+
+  .darkModeCont > i {
+    color: gold;
+    font-size: 7vw;
+    cursor: pointer;
+  }
+}

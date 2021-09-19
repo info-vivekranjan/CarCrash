@@ -11,7 +11,7 @@ function Navbar() {
       <section className={styles.leftNav}>
         <div>
           <Link className={styles.navLogo} to="/">
-            Vehicle Crash
+            VCR
           </Link>
         </div>
       </section>
