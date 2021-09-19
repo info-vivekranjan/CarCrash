@@ -107,3 +107,68 @@
   background-color: #28a745;
   color: white;
 }
+
+.showCardCont {
+  /* border: 1px solid black; */
+  width: 80%;
+  margin: auto;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.showCardGrid i,
+.showCardRow i {
+  font-size: 35px;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.cardCont {
+  /* border: 1px solid red; */
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #ebebeb;
+  padding: 20px 5px;
+}
+
+.cardLinkCont {
+  /* border: 1px solid silver; */
+  width: 24vw;
+  margin: 7px;
+  background-color: white;
+  transition: 300ms;
+  border-radius: 4px;
+}
+.cardLinkCont:hover {
+  box-shadow: 2px 2px 6px 10px rgba(209, 209, 209, 0.658);
+}
+.cardLink {
+  text-decoration: none;
+}
+
+.cardLink div:nth-child(1),
+.cardLink div:nth-child(2),
+.cardLink div:nth-child(3),
+.cardLink div:nth-child(4) {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.cardLink div:nth-child(1) {
+  color: #ff073a;
+}
+
+.cardLink div:nth-child(2) {
+  color: #007bff;
+}
+
+.cardLink div:nth-child(3) {
+  color: #28a745;
+}
+
+.cardLink div:nth-child(4) {
+  color: #6c757d;
+}
