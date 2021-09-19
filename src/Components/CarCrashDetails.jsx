@@ -47,7 +47,10 @@ function CarCrashDetails() {
       className={styles.crashDetailsCont}
       style={{ backgroundColor: theme.bodyBackgroundCrashDetails }}
     >
-      <section className={styles.crashSection}>
+      <section
+        className={styles.crashSection}
+        style={{ backgroundColor: theme.gridBackground }}
+      >
         <header className={styles.crashHeader}>
           <h1>Car Crash Details</h1>
         </header>
@@ -56,57 +59,105 @@ function CarCrashDetails() {
 
         <section>
           {isLoading ? (
-            <h3>Loading...</h3>
+            <h3 style={{ width: "15%", margin: "auto" }}>Loading...</h3>
           ) : isError ? (
             <h3>Something went wrong...</h3>
           ) : (
-            <section>
+            <section
+              className={styles.detailsTable}
+              style={{ backgroundColor: theme.gridBackground }}
+            >
               {/* Using conditional check so that if that perticular field is not available it will not go for the next step */}
 
-              <h1>Vehicle type code1: {data[0]?.vehicle_type_code1}</h1>
-              <h1>Vehicle type code2: {data[0]?.vehicle_type_code2}</h1>
-              <h1>Crash date: {data[0]?.crash_date}</h1>
-              <h1>Crash time: {data[0]?.crash_time}</h1>
-              <h1>On street name: {data[0]?.on_street_name}</h1>
-              <h1>
-                Contributing factor vehicle 1:{" "}
-                {data[0]?.contributing_factor_vehicle_1}
-              </h1>
-              <h1>
-                Contributing factor vehicle 2:{" "}
-                {data[0]?.contributing_factor_vehicle_2}
-              </h1>
-              <h1>
-                Number of persons injured: {data[0]?.number_of_persons_injured}
-              </h1>
-              <h1>
-                Number of persons killed: {data[0]?.number_of_persons_killed}
-              </h1>
-              <h1>
-                Number of pedestrians injured:{" "}
-                {data[0]?.number_of_pedestrians_injured}
-              </h1>
-              <h1>
-                Number of pedestrians killed:{" "}
-                {data[0]?.number_of_pedestrians_killed}
-              </h1>
-              <h1>
-                Number of cyclist injured: {data[0]?.number_of_cyclist_injured}
-              </h1>
-              <h1>
-                Number of cyclist killed: {data[0]?.number_of_cyclist_killed}
-              </h1>
-              <h1>
-                Number of motorist injured:{" "}
-                {data[0]?.number_of_motorist_injured}
-              </h1>
-              <h1>
-                Number of motorist killed: {data[0]?.number_of_motorist_killed}
-              </h1>
-              <h1>
-                Number of pedestrians injured:{" "}
-                {data[0]?.number_of_pedestrians_injured}
-              </h1>
+              <div className={styles.deatilsHeader}>
+                <span>Title</span>
+                <span>Data</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Vehicle type code1</span>
+                <span>{data[0]?.vehicle_type_code1}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Vehicle type code2</span>
+                <span>{data[0]?.vehicle_type_code2}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Crash date</span>
+                <span>{data[0]?.crash_date}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Crash time</span>
+                <span>{data[0]?.crash_time}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>On street name</span>
+                <span>{data[0]?.on_street_name}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Contributing factor vehicle 1</span>
+                <span>{data[0]?.contributing_factor_vehicle_1}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Contributing factor vehicle 2</span>
+                <span>{data[0]?.contributing_factor_vehicle_2}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of persons injured</span>
+                <span>{data[0]?.number_of_persons_injured}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of persons killed</span>
+                <span>{data[0]?.number_of_persons_killed}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of pedestrians injured</span>
+                <span>{data[0]?.number_of_pedestrians_injured}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of pedestrians killed</span>
+                <span>{data[0]?.number_of_pedestrians_killed}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of cyclist injured</span>
+                <span>{data[0]?.number_of_cyclist_injured}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of cyclist killed</span>
+                <span>{data[0]?.number_of_cyclist_killed}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of motorist injured</span>
+                <span>{data[0]?.number_of_motorist_injured}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of motorist killed</span>
+                <span>{data[0]?.number_of_motorist_killed}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of pedestrians injured</span>
+                <span>{data[0]?.number_of_pedestrians_injured}</span>
+              </div>
+
+              <div className={styles.deatilsRow}>
+                <span>Number of pedestrians killed</span>
+                <span>{data[0]?.number_of_pedestrians_killed}</span>
+              </div>
             </section>
           )}
         </section>

@@ -17,6 +17,7 @@ const themeValue = {
     tableBorderTop: "none",
     headerColor: "#c4c4c4",
     gridsBackground: "#0E141E",
+    gridBackground: "#161625",
   },
 };
 
