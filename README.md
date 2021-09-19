@@ -54,3 +54,6 @@ CarCrash
 
 - Grid Layout
   ![Grid Layout](./Screenshots/grid1.png)
+
+- Crash Details
+  ![Grid Layout](./Screenshots/crashDetails.png)
