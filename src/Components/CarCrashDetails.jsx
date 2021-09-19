@@ -59,48 +59,48 @@ function CarCrashDetails() {
             <h3>Something went wrong...</h3>
           ) : (
             <section>
-              <h1>vehicle_type_code1: {data[0]?.vehicle_type_code1}</h1>
-              <h1>vehicle_type_code2: {data[0]?.vehicle_type_code2}</h1>
-              <h1>crash_date: {data[0]?.crash_date}</h1>
-              <h1>crash_time: {data[0]?.crash_time}</h1>
-              <h1>on_street_name: {data[0]?.on_street_name}</h1>
+              <h1>Vehicle type code1: {data[0]?.vehicle_type_code1}</h1>
+              <h1>Vehicle type code2: {data[0]?.vehicle_type_code2}</h1>
+              <h1>Crash date: {data[0]?.crash_date}</h1>
+              <h1>Crash time: {data[0]?.crash_time}</h1>
+              <h1>On street name: {data[0]?.on_street_name}</h1>
               <h1>
-                contributing_factor_vehicle_1:{" "}
+                Contributing factor vehicle 1:{" "}
                 {data[0]?.contributing_factor_vehicle_1}
               </h1>
               <h1>
-                contributing_factor_vehicle_2:{" "}
+                Contributing factor vehicle 2:{" "}
                 {data[0]?.contributing_factor_vehicle_2}
               </h1>
               <h1>
-                number_of_persons_injured: {data[0]?.number_of_persons_injured}
+                Number of persons injured: {data[0]?.number_of_persons_injured}
               </h1>
               <h1>
-                number_of_persons_killed: {data[0]?.number_of_persons_killed}
+                Number of persons killed: {data[0]?.number_of_persons_killed}
               </h1>
               <h1>
-                number_of_pedestrians_injured:{" "}
+                Number of pedestrians injured:{" "}
                 {data[0]?.number_of_pedestrians_injured}
               </h1>
               <h1>
-                number_of_pedestrians_killed:{" "}
+                Number of pedestrians killed:{" "}
                 {data[0]?.number_of_pedestrians_killed}
               </h1>
               <h1>
-                number_of_cyclist_injured: {data[0]?.number_of_cyclist_injured}
+                Number of cyclist injured: {data[0]?.number_of_cyclist_injured}
               </h1>
               <h1>
-                number_of_cyclist_killed: {data[0]?.number_of_cyclist_killed}
+                Number of cyclist killed: {data[0]?.number_of_cyclist_killed}
               </h1>
               <h1>
-                number_of_motorist_injured:{" "}
+                Number of motorist injured:{" "}
                 {data[0]?.number_of_motorist_injured}
               </h1>
               <h1>
-                number_of_motorist_killed: {data[0]?.number_of_motorist_killed}
+                Number of motorist killed: {data[0]?.number_of_motorist_killed}
               </h1>
               <h1>
-                number_of_pedestrians_injured:{" "}
+                Number of pedestrians injured:{" "}
                 {data[0]?.number_of_pedestrians_injured}
               </h1>
             </section>
