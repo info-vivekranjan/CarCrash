@@ -18,12 +18,14 @@ function CarCrash() {
 
   const [showCard, setShowCard] = useState(true);
 
-  const getCrashData = (page = 0) => {
+  const [query, setQuery] = useState("2021-04-14");
+
+  const getCrashData = (date = "2021-04-14", page = 0) => {
     setIsLoading(true);
 
     return axios
       .get(
-        `https://data.cityofnewyork.us/resource/h9gi-nx95.json?&$offset=${page}&$limit=15`
+        `https://data.cityofnewyork.us/resource/h9gi-nx95.json?crash_date=${date}T00:00:00.000&$offset=${page}&$limit=15`
       )
       .then((res) => {
         setData(res.data);
@@ -41,14 +43,28 @@ function CarCrash() {
   };
 
   useEffect(() => {
-    getCrashData(page);
+    getCrashData(query, page);
   }, [page]);
+
+  const handleFilter = () => {
+    getCrashData(query);
+  };
+
+  console.log(data);
+
+  const handleKeyPress = (e) => {
+    if (e.key == "Enter") {
+      getCrashData(query);
+    }
+  };
 
   return (
     <div className={styles.carCrashCont}>
       <section className={styles.mainImgCont}>
         <div className={styles.backgroundText}>
-          <div style={{ color: theme.headerColor }}>VEHICAL COLLISION DATA</div>
+          <div style={{ color: theme.headerColor }}>
+            VEHICAL COLLISION RECORDS
+          </div>
         </div>
       </section>
 
@@ -72,6 +88,23 @@ function CarCrash() {
             ></i>
           </div>
         )}
+      </section>
+
+      <section>
+        <div>
+          <div style={{ color: "#6C757D" }}>
+            Search collision record by date
+          </div>
+          <div className={styles.filterCont}>
+            <input
+              placeholder="2014-01-21"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyPress={handleKeyPress}
+            />
+            <button onClick={handleFilter}>Search</button>
+          </div>
+        </div>
       </section>
 
       <>
@@ -145,7 +178,10 @@ function CarCrash() {
                 <div className={styles.cardCont}>
                   {data.map((item) => {
                     return (
-                      <div className={styles.cardLinkCont}>
+                      <div
+                        className={styles.cardLinkCont}
+                        style={{ backgroundColor: theme.gridsBackground }}
+                      >
                         <Link
                           key={item.collision_id}
                           to={item.collision_id}
