@@ -52,7 +52,7 @@ function CarCrashDetails() {
         style={{ backgroundColor: theme.gridBackground }}
       >
         <header className={styles.crashHeader}>
-          <h1>Car Crash Details</h1>
+          <h1>Vehical Crash Details</h1>
         </header>
 
         {/* Showing the stored data in "data" array by mapping through it */}
