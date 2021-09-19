@@ -60,6 +60,8 @@ function CarCrash() {
 
   return (
     <div className={styles.carCrashCont}>
+      {/* Landing page consisting background image*/}
+
       <section className={styles.mainImgCont}>
         <div className={styles.backgroundText}>
           <div style={{ color: theme.headerColor }}>
@@ -71,6 +73,8 @@ function CarCrash() {
       <header className={styles.headerCont}>
         <h1>Vehical Crash Data</h1>
       </header>
+
+      {/* toggling list view to grid by using toggle operator*/}
 
       {/* Using ternery operator for toggling list view to grid by using toggle operator ! */}
 
@@ -92,6 +96,8 @@ function CarCrash() {
         )}
       </section>
 
+      {/* Filtering out the collision records by date */}
+
       <section>
         <div>
           <div style={{ color: "#6C757D" }}>
@@ -108,6 +114,8 @@ function CarCrash() {
           </div>
         </div>
       </section>
+
+      {/* Both Grid view and List view section */}
 
       <>
         {showCard ? (
