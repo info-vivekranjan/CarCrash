@@ -10,7 +10,7 @@ function CarCrashDetails() {
 
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsEroor] = useState(false);
-  const { id } = useParams();
+  const { id } = useParams(); // useParam hook for exctracting id which is getting from the api
 
   const { theme } = useContext(CarCrashContext);
 
@@ -52,6 +52,8 @@ function CarCrashDetails() {
           <h1>Car Crash Details</h1>
         </header>
 
+        {/* Showing the stored data in "data" array by mapping through it */}
+
         <section>
           {isLoading ? (
             <h3>Loading...</h3>
@@ -59,6 +61,8 @@ function CarCrashDetails() {
             <h3>Something went wrong...</h3>
           ) : (
             <section>
+              {/* Using conditional check so that if that perticular field is not available it will not go for the next step */}
+
               <h1>Vehicle type code1: {data[0]?.vehicle_type_code1}</h1>
               <h1>Vehicle type code2: {data[0]?.vehicle_type_code2}</h1>
               <h1>Crash date: {data[0]?.crash_date}</h1>

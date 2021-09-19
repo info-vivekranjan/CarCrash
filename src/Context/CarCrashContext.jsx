@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 
-const CarCrashContext = createContext();
+const CarCrashContext = createContext(); //Context Api for creating context so that data can be transfer from this file to all the componenets
 
 const themeValue = {
   light: {
@@ -21,19 +21,22 @@ const themeValue = {
 };
 
 function CarCrashContextProvider({ children }) {
-  const [currentTheme, setCurrentTheme] = useState("light");
+  const [currentTheme, setCurrentTheme] = useState("light"); // useState hook to change the state at anytime we call setCurrentTheme it will change the theme form light to dark
 
   const toggleTheme = () => {
     setCurrentTheme(currentTheme === "light" ? "dark" : "light");
   };
 
   const value = {
+    // this is data which is given to the value attribute of CarCrashContext.Provider so that we can use it by extracting using useContext hook in the other components
     currentTheme,
     toggleTheme,
     theme: themeValue[currentTheme],
   };
 
   return (
+    // Context Provider to provide data to its children components
+
     <CarCrashContext.Provider value={value}>
       {children}
     </CarCrashContext.Provider>

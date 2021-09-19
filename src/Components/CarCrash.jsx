@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 import { CarCrashContext } from "../Context/CarCrashContext";
 import styles from "./Css/CarCrash.module.css";
 
-import collision1 from "./Img/collision1.jpg";
-
 function CarCrash() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); // useState hook for changing the state which is initially empty by using api, will push the data by calling setData function
 
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsEroor] = useState(false);
 
   const [page, setPage] = useState(0);
 
-  const { theme } = useContext(CarCrashContext);
+  const { theme } = useContext(CarCrashContext); // exctracting theme using useContext hook by destructuring
 
-  const [showCard, setShowCard] = useState(true);
+  const [showCard, setShowCard] = useState(true); // this is for toggling list to grid view by calling setShowCard(!showCard), which is initially true
 
   const [query, setQuery] = useState("2021-04-14");
 
@@ -41,6 +39,8 @@ function CarCrash() {
         setIsLoading(false);
       });
   };
+
+  // useEffect hook for the after-effects which has the array dependency page to change the pages
 
   useEffect(() => {
     getCrashData(query, page);
@@ -71,6 +71,8 @@ function CarCrash() {
       <header className={styles.headerCont}>
         <h1>Vehical Crash Data</h1>
       </header>
+
+      {/* Using ternery operator for toggling list view to grid by using toggle operator ! */}
 
       <section className={styles.showCardCont}>
         {showCard ? (
