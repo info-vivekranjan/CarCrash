@@ -4,7 +4,7 @@
 
 <!--- ![Product Presentation Image](public/cover.png) -->
 
-This is the project that I developed, which is given as a task by Ipsator. I have tried my best to put all the things which is mentioned in the given pdf and adhere to the web dev discipline which is performence, accessbility and best practices to make it better.
+This is the project that I developed,has given as a task by Ipsator. I have tried my best to put all the things which is mentioned in the given pdf and adhere to the web dev discipline which is performence, accessbility and best practices to make it better.
 
 # Table of Contents
 
@@ -53,4 +53,4 @@ CarCrash
   ![List Layout](./Screenshots/table1.png)
 
 - Grid Layout
-  ![Grid Layout](./Screenshots/grid.png)
+  ![Grid Layout](./Screenshots/grid1.png)
