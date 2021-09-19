@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { CarCrashContext } from "../Context/CarCrashContext";
 import styles from "./Css/CarCrash.module.css";
 
+import collision1 from "./Img/collision1.jpg";
+
 function CarCrash() {
   const [data, setData] = useState([]);
 
@@ -44,8 +46,14 @@ function CarCrash() {
 
   return (
     <div className={styles.carCrashCont}>
+      <section className={styles.mainImgCont}>
+        <div className={styles.backgroundText}>
+          <div style={{ color: theme.headerColor }}>VEHICAL COLLISION DATA</div>
+        </div>
+      </section>
+
       <header className={styles.headerCont}>
-        <h1>Car Crash Data</h1>
+        <h1>Vehical Crash Data</h1>
       </header>
 
       <section className={styles.showCardCont}>

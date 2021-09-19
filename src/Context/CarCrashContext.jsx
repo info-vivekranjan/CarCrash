@@ -15,6 +15,7 @@ const themeValue = {
     tableBorder: "1px solid #003c80",
     tableBorderBottom: "none",
     tableBorderTop: "none",
+    headerColor: "#c4c4c4",
   },
 };
 

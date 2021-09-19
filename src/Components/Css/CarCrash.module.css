@@ -3,6 +3,26 @@
   padding-top: 70px;
 }
 
+.mainImgCont {
+  background-image: linear-gradient(#00000083, #00000083),
+    url("../Img/collision1.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.backgroundText {
+  width: 90%;
+  margin: auto;
+}
+
+.backgroundText div {
+  color: #ffff;
+  padding-top: 1.5vh;
+  font-size: 12vw;
+  font-weight: 600;
+}
+
 .tableHeader {
   width: 80%;
   display: flex;
